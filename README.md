@@ -1,3 +1,3 @@
-# vagrant-octobercms-bootstrap
+# vagrant-octobercms-boilerplate
 
-A bootstrapped Laravel/OctoberCMS environment built on Vagrant.
+A Laravel/OctoberCMS application boilerplate built on Vagrant.
