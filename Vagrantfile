@@ -11,7 +11,7 @@ MAX_MEMORY = 512
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Vagrant box to build on
-    config.vm.box = "ubuntu/trusty64"
+    config.vm.box = "ubuntu/vivid64"
 
     # host to guest port forwarding
     config.vm.network :forwarded_port, guest: 80, host: 1338
