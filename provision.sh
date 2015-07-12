@@ -132,4 +132,25 @@ if [ ! -d "/vagrant/www" ]; then
 
     # move the files to /vagrant/www
     mv install-master /vagrant/www
+
+    echo "#####################################################################"
+    echo "#####################################################################"
+    echo "###"
+    echo "###"
+    echo "###"
+    echo "###  Your new OctoberCMS application is almost ready!"
+    echo "###  Navigate to localhost:1338/install.php to finish the setup."
+    echo "###"
+    echo "###  You will need these credentials:"
+    echo "###"
+    echo "###    Database Name: octobercms"
+    echo "###    Database User: root"
+    echo "###    Database Pass: Renobit"
+    echo "###"
+    echo "###  Happy Coding!"
+    echo "###"
+    echo "###"
+    echo "###"
+    echo "#####################################################################"
+    echo "#####################################################################"
 fi
