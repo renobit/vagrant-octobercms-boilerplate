@@ -2,6 +2,10 @@
 
 An [OctoberCMS](https://github.com/octobercms/october) application boilerplate built on [Vagrant](https://www.vagrantup.com). Get up and running in about 60 seconds.
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/renobit/vagrant-octobercms-boilerplate/gh-pages/octobercms-screenshot.png" alt="OctoberCMS Screenshot">
+</p>
+
 ## Setup
 
 This project will allow you to easily bootstrap a new OctoberCMS application with minimal setup. Since it's built on Vagrant, you won't even need to worry about configuring your own environment! You only need to have a couple of things to get started:
