@@ -6,7 +6,7 @@
 # -*- mode: ruby; -*-
 
 VAGRANTFILE_API_VERSION = "2"
-MAX_MEMORY = 512
+MAX_MEMORY = 768
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
