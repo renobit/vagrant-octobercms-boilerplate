@@ -59,8 +59,18 @@ server {
         server_name _;
 
         location / {
-                try_files $uri $uri/ /index.html;
+                try_files $uri $uri/ /index.html /index.php$is_args$args;
         }
+
+        rewrite ^themes/.*/(layouts|pages|partials)/.*.htm /index.php break;
+        rewrite ^bootstrap/.* /index.php break;
+        rewrite ^config/.* /index.php break;
+        rewrite ^vendor/.* /index.php break;
+        rewrite ^storage/cms/.* /index.php break;
+        rewrite ^storage/logs/.* /index.php break;
+        rewrite ^storage/framework/.* /index.php break;
+        rewrite ^storage/temp/protected/.* /index.php break;
+        rewrite ^storage/app/uploads/protected/.* /index.php break;
 
         error_page 404 /404.html;
         error_page 500 502 503 504 /50x.html;
@@ -77,16 +87,6 @@ server {
                 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
                 include fastcgi_params;
         }
-
-        rewrite ^themes/.*/(layouts|pages|partials)/.*.htm /index.php break;
-        rewrite ^bootstrap/.* /index.php break;
-        rewrite ^config/.* /index.php break;
-        rewrite ^vendor/.* /index.php break;
-        rewrite ^storage/cms/.* /index.php break;
-        rewrite ^storage/logs/.* /index.php break;
-        rewrite ^storage/framework/.* /index.php break;
-        rewrite ^storage/temp/protected/.* /index.php break;
-        rewrite ^storage/app/uploads/protected/.* /index.php break;
 }
 EOF
 
