@@ -90,3 +90,7 @@ grep -P -q ";?cgi\.fix_pathinfo" /etc/php5/fpm/php.ini && sed -i "s/;\?cgi\.fix_
 
 # restart php-fpm
 service php5-fpm restart
+
+# install composer package manager
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
