@@ -25,3 +25,12 @@ vagrant up
 ```
 
 Note: Vagrant will download the necessary box automatically if it isn't already on the machine.
+
+After downloading, upgrading, and configuring the box, you will have a brand new OctoberCMS application. A couple of things to keep note of:
+
+- The ```www``` directory holds all of your new application files
+- Port ```1338``` on the host is mapped to port ```80``` in the VM
+
+## License
+
+[MIT](https://github.com/renobit/vagrant-octobercms-boilerplate/blob/master/LICENSE)
