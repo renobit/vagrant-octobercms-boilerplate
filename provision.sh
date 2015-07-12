@@ -79,3 +79,14 @@ EOF
 
 # start nginx
 service nginx restart
+
+
+printf "Installing PHP..."
+# install PHP
+apt-get install -qq php5 php5-fpm php5-mysql php5-curl
+
+# configure PHP
+grep -P -q ";?cgi\.fix_pathinfo" /etc/php5/fpm/php.ini && sed -i "s/;\?cgi\.fix_pathinfo.*/cgi.fix_pathinfo=0/g" /etc/php5/fpm/php.ini || echo "cgi.fix_pathinfo=0" | tee --append /etc/php5/fpm/php.ini > /dev/null
+
+# restart php-fpm
+service php5-fpm restart
