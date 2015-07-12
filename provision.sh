@@ -122,12 +122,14 @@ curl -sS https://getcomposer.org/installer | php5
 mv composer.phar /usr/local/bin/composer
 
 
-printf "Creating OctoberCMS boilerplate..."
-# download OctoberCMS
-wget https://octobercms.com/download -O october.zip > /dev/null
+if [ ! -d "/vagrant/www" ]; then
+    printf "Creating OctoberCMS boilerplate..."
+    # download OctoberCMS
+    wget https://octobercms.com/download -O october.zip > /dev/null
 
-# extract the files
-unzip october.zip > /dev/null
+    # extract the files
+    unzip october.zip > /dev/null
 
-# move the files to /vagrant/www
-mv install-master /vagrant/www
+    # move the files to /vagrant/www
+    mv install-master /vagrant/www
+fi

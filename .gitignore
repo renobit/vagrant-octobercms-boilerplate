@@ -1,6 +1,6 @@
 # Directories to Ignore
 /.vagrant
-/www/**
+/www
 
 # Files to Ignore
 !.gitkeep
