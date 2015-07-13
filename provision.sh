@@ -35,14 +35,7 @@ mysql -uroot -p${mysql_root_password} -e "create database ${mysql_database_name}
 
 
 printf "Installing Nginx..."
-# adding source list
-echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/nginx-stable.list
-
-# adding key
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C
-
 # install nginx
-apt-get update -qq > /dev/null
 apt-get install -qq nginx
 
 # configure nginx
