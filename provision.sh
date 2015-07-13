@@ -126,8 +126,8 @@ if [ ! -d "/vagrant/www" ]; then
     # move the files to /vagrant/www
     mv install-master /vagrant/www
 
-    echo "#####################################################################"
-    echo "#####################################################################"
+    echo "###################################################################"
+    echo "###################################################################"
     echo "###"
     echo "###"
     echo "###"
@@ -136,14 +136,35 @@ if [ ! -d "/vagrant/www" ]; then
     echo "###"
     echo "###  You will need these credentials:"
     echo "###"
-    echo "###    Database Name: octobercms"
+    echo "###    Database Name: ${mysql_database_name}"
     echo "###    Database User: root"
-    echo "###    Database Pass: Renobit"
+    echo "###    Database Pass: ${mysql_root_password}"
     echo "###"
     echo "###  Happy Coding!"
     echo "###"
     echo "###"
     echo "###"
-    echo "#####################################################################"
-    echo "#####################################################################"
+    echo "###################################################################"
+    echo "###################################################################"
+else
+    printf "OctoberCMS application already exists. Running migrations..."
+    # run the migrations
+    cd /vagrant/www && php artisan october:up
+
+    echo "###################################################################"
+    echo "###################################################################"
+    echo "###"
+    echo "###"
+    echo "###"
+    echo "###  Your existing OctoberCMS application is ready!"
+    echo "###  Navigate to localhost:1338 to view your site, or"
+    echo "###"
+    echo "###  Contact your team to get your login credentials."
+    echo "###"
+    echo "###  Happy Coding!"
+    echo "###"
+    echo "###"
+    echo "###"
+    echo "###################################################################"
+    echo "###################################################################"
 fi
